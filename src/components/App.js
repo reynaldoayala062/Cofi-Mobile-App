@@ -1,14 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TextInput,
-  Button,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity, } from "react-native";
  
 export default function App() {
   const [email, setEmail] = useState("");
@@ -16,7 +8,7 @@ export default function App() {
  
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require("./../image/images.jpeg")} />
+      <Image style={styles.image} source={require("./../images/images.jpeg")} />
  
       <StatusBar style="auto" />
       <View style={styles.inputView}>
@@ -43,7 +35,11 @@ export default function App() {
       </TouchableOpacity>
  
       <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.loginText}>LOGIN</Text>
+        <Text style={styles.loginText}>Login</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.SignUpBtn}>
+        <Text style={styles.loginText}>Sign Up</Text>
       </TouchableOpacity>
     </View>
   );
@@ -68,7 +64,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     width: "70%",
     height: 45,
-    marginBottom: 20,
+    marginBottom: 30,
  
     alignItems: "center",
   },
@@ -82,7 +78,7 @@ const styles = StyleSheet.create({
  
   forgot_button: {
     height: 30,
-    marginBottom: 30,
+    marginBottom: 10,
   },
  
   loginBtn: {
@@ -91,8 +87,20 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 40,
+    marginTop: 30,
     backgroundColor: "#8ce3f5",
+    marginBottom: 20,
+  },
+
+  SignUpBtn: {
+    width: "80%",
+    borderRadius: 25,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 10,
+    backgroundColor: "#8ce3f5",
+    marginBottom: 20,
   },
 });
 
